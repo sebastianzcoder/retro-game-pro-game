@@ -9,6 +9,7 @@ let tail = game.createSprite(2, 0)
 rocketship = game.createSprite(2, 4)
 let meteor = game.createSprite(2, 0)
 tail.set(LedSpriteProperty.Brightness, 20)
+let score = 0
 basic.forever(function () {
     meteor.set(LedSpriteProperty.X, randint(0, 4))
     basic.pause(200)
@@ -28,12 +29,14 @@ basic.forever(function () {
             # # # # #
             # # # # #
             `)
+        basic.showString("" + (score))
         basic.clearScreen()
         while (true) {
         	
         }
     }
     meteor.set(LedSpriteProperty.Y, 0)
+    score += 1
 })
 basic.forever(function () {
     tail.set(LedSpriteProperty.X, meteor.get(LedSpriteProperty.X))
