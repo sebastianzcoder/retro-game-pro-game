@@ -8,7 +8,7 @@ let rocketship: game.LedSprite = null
 let tail = game.createSprite(2, 0)
 rocketship = game.createSprite(2, 4)
 let meteor = game.createSprite(2, 0)
-tail.set(LedSpriteProperty.Brightness, 100)
+tail.set(LedSpriteProperty.Brightness, 50)
 basic.forever(function () {
     meteor.set(LedSpriteProperty.X, randint(0, 4))
     basic.pause(200)
